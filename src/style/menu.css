@@ -2,10 +2,11 @@
   height: 100vh;
   width: 100px;
 
-  position: absolute;
-  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   padding: 0;
- 
+  z-index: 3; /* важно, чтобы z - index был выше всех других блоков*/
   overflow-x: hidden;
 }
 .menu ul {
@@ -14,20 +15,15 @@
   margin-left: 0; 
   padding-left: 0; 
   position: absolute;
-  background: rgba(34,34,34,.2);
   
+  background: rgba(34,34,34,.2);
 }
 nav {
   overflow: scroll;
   overflow-x: hidden;
 }
-::-webkit-scrollbar {
+.menu::-webkit-scrollbar {
   width: 0px; 
-  background: transparent; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
 }
 
 .menu-Ul li a {

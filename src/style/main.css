@@ -1,6 +1,19 @@
 .main {
-  width: 100%;
+   
+
+  position: relative;
+  top: -100vh;
+  z-index: 2;
+  padding: 3%;
   min-height: 100vh;
   height: 2000px;
   background-color: tomato;
+}
+.unselectable {
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none;   
+  -khtml-user-select: none;   
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;        
 }

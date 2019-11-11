@@ -16,19 +16,16 @@ componentDidMount(){
     let ul = nav.querySelector('ul');
     
     ul.style.transitionProperty = 'all';
-    ul.style.transitionDuration = '0.7s';
+    ul.style.transitionDuration = '0.8s';
 
     nav.onmouseover = function(){ ul.style.right = 0 };
     nav.onmouseout = function(){ ul.style.right = '100%' };
 
-    
-    
-
     this.setState({
         arrLi : [
             {titel : 'Work'},
-            {titel : 'About'},
-            {titel : 'Story'},
+            {titel : 'About', href : 'https://github.com/GermanVor'},
+            {titel : 'Супер милый пупсичка',  href : 'https://vk.com/wmwll'},
             {titel : 'Contact'},
             {titel : 'Shop'},
         ]
@@ -37,10 +34,10 @@ componentDidMount(){
     
 render(){
     return (
-        <nav className='menu'>
+        <nav className='menu unselectable'>
             <ul className='menu-Ul'>
                 {this.state.arrLi.map( el => (
-                        <li><a href='#'>{el.titel}</a></li>
+                        <li><a href={el.href || '#'} target="_blank">{el.titel}</a></li>
                 ) )}
             </ul>
         </nav>
