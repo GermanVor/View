@@ -15,7 +15,7 @@ componentWillMount(){}
 render(){
     return (
         <div className='main'>
-
+                main container is tomato color <br/> sdfghasdfgh
         </div>
     );
 }

@@ -19,7 +19,7 @@ componentDidMount(){
     ul.style.transitionDuration = '0.7s';
 
     nav.onmouseover = function(){ ul.style.right = 0 };
-    //nav.onmouseout = function(){ ul.style.right = '100%' };
+    nav.onmouseout = function(){ ul.style.right = '100%' };
 
     
     
