@@ -34,7 +34,7 @@ componentDidMount(){
     
 render(){
     return (
-        <nav className='menu unselectable'>
+        <nav className='menu unselectable' ref={this.state.ref}>
             <ul className='menu-Ul'>
                 {this.state.arrLi.map( el => (
                         <li><a href={el.href || '#'} target="_blank">{el.titel}</a></li>

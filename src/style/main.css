@@ -1,14 +1,16 @@
 .main {
-   
-
-  position: relative;
-  top: -100vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  
   z-index: 2;
   padding: 3%;
-  min-height: 100vh;
-  height: 2000px;
+
+  width: 100%;
+  
   background-color: tomato;
 }
+
 .unselectable {
   -webkit-touch-callout: none; 
   -webkit-user-select: none;   

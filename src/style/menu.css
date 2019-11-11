@@ -1,9 +1,9 @@
 .menu {
   height: 100vh;
-  width: 100px;
-
+  width: 100px; /**/
   position: -webkit-sticky;
   position: sticky;
+
   top: 0;
   padding: 0;
   z-index: 3; /* важно, чтобы z - index был выше всех других блоков*/
