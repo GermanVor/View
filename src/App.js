@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Menu from './containers/menu'
 import Main from './containers/main'
 
 class App extends  Component{
@@ -16,8 +15,9 @@ class App extends  Component{
   render() {
     return (
       <div className="App" ref={this.state.ref}>
-        <Menu />
         <Main />
+        
+        
       </div>
     );
   }

@@ -13,14 +13,14 @@ constructor(props){
 }
 componentDidMount(){
     let nav =  document.querySelector('nav.menu');
-    let ul = nav.querySelector('ul');
+    let div = nav.querySelector('div');
+    console.dir(div.clientWidth)
+    div.style.transitionProperty = 'all';
+    div.style.transitionDuration = '0.8s';
+
+    nav.onmouseover = function(){ div.style.transform = 'translateX(0)'; };
+    nav.onmouseout = function(){ div.style.transform = 'translateX(-100%)'; };
     
-    ul.style.transitionProperty = 'all';
-    ul.style.transitionDuration = '0.8s';
-
-    nav.onmouseover = function(){ ul.style.right = 0 };
-    nav.onmouseout = function(){ ul.style.right = '100%' };
-
     this.setState({
         arrLi : [
             {titel : 'Work'},
@@ -35,11 +35,13 @@ componentDidMount(){
 render(){
     return (
         <nav className='menu unselectable' ref={this.state.ref}>
-            <ul className='menu-Ul'>
-                {this.state.arrLi.map( el => (
-                        <li><a href={el.href || '#'} target="_blank">{el.titel}</a></li>
-                ) )}
-            </ul>
+            <div>
+                <ul className='menu-Ul'>
+                    {this.state.arrLi.map( el => (
+                            <li><a href={el.href || '#'} target="_blank">{el.titel}</a></li>
+                    ) )}
+                </ul>
+            </div>
         </nav>
     );
 }

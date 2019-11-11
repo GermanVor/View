@@ -1,31 +1,24 @@
 .menu {
-  height: 100vh;
-  width: 3%; /**/
-  position: -webkit-sticky;
-  position: fixed;
-
-  top: 0;
-  padding: 0;
-  z-index: 3; /* важно, чтобы z - index был выше всех других блоков*/
-  overflow-x: hidden;
-}
-.menu ul {
-  overflow:  hidden;
-  width: 100px;
-  margin-left: 0; 
-  padding-left: 0; 
   position: absolute;
-  
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 2;
+ 
+}
+.menu div {
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  visibility: visible;
   background: rgba(34,34,34,.2);
 }
-nav {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-.menu::-webkit-scrollbar {
-  width: 0px; 
-}
 
+.menu-Ul {
+  padding: 0;
+  margin: 0;
+}
 .menu-Ul li a {
   text-decoration: none;
   color: #ffffff;
