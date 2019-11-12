@@ -9,15 +9,10 @@ class App extends  Component{
           ref : React.createRef(),
       }
   }
-  componentDidMount() {
-    // this.state.ref.current.style.height = document.querySelector('.main').offsetHeight + 'px';
-  }
   render() {
     return (
       <div className="App" ref={this.state.ref}>
         <Main />
-        
-        
       </div>
     );
   }

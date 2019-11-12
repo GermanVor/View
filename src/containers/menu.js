@@ -1,50 +1,47 @@
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import '../style/menu.css'
- 
-class Menu extends  Component{
-constructor(props){
-    super(props);
-    autoBind(this);
-    this.state = { 
-        ref : React.createRef(),
-        arrLi : [],
-    }
-}
-componentDidMount(){
-    let nav =  document.querySelector('nav.menu');
-    let div = nav.querySelector('div');
-    console.dir(div.clientWidth)
-    div.style.transitionProperty = 'all';
-    div.style.transitionDuration = '0.8s';
+import { Link } from 'react-router-dom';
+import mapMenu from '../components/mapMenu'
 
-    nav.onmouseover = function(){ div.style.transform = 'translateX(0)'; };
-    nav.onmouseout = function(){ div.style.transform = 'translateX(-100%)'; };
-    
-    this.setState({
-        arrLi : [
-            {titel : 'Work'},
-            {titel : 'About', href : 'https://github.com/GermanVor'},
-            {titel : 'Супер милый пупсичка',  href : 'https://vk.com/wmwll'},
-            {titel : 'Contact'},
-            {titel : 'Shop'},
-        ]
-    });
-}
-    
-render(){
-    return (
-        <nav className='menu unselectable' ref={this.state.ref}>
-            <div>
-                <ul className='menu-Ul'>
-                    {this.state.arrLi.map( el => (
-                            <li><a href={el.href || '#'} target="_blank">{el.titel}</a></li>
-                    ) )}
-                </ul>
-            </div>
-        </nav>
-    );
-}
+class Menu extends  Component{
+    constructor(props){
+        super(props);
+        autoBind(this);
+        this.state = { 
+            ref : React.createRef(),
+            arrLi : [],
+            mapMenu : mapMenu
+        }
+    }
+    componentDidMount(){
+        
+        let nav =  document.querySelector('nav.menu');
+        let div = nav.querySelector('div');
+        
+        div.style.transitionProperty = 'all';
+        div.style.transitionDuration = '0.8s';
+
+        nav.onmouseover = function(){ div.style.transform = 'translateX(0)'; };
+        nav.onmouseout = function(){ div.style.transform = 'translateX(-100%)'; };
+        
+    }
+        
+    render(){
+        console.log(this.state.mapMenu)
+        return (
+            <nav className='menu unselectable' ref={this.state.ref}>
+                <div>
+                    <ul className='menu-Ul'>
+                        {this.state.mapMenu.map( el => (
+                                <li><Link to={'/' + el.name }>{el.name}</Link></li>
+                        ) )}
+                        <li><a href='https://vk.com/wmwll'>Самая милая девочка на планете</a></li>
+                    </ul>
+                </div>
+            </nav>
+        );
+    }
 }
 
 export default Menu

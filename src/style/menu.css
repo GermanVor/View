@@ -1,18 +1,19 @@
 .menu {
   position: absolute;
   top: 0;
+  left: 0;
   bottom: 0;
-  width: 10%;
+  width: 5%;
   z-index: 2;
  
 }
 .menu div {
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 100px;
 
   visibility: visible;
-  background: rgba(34,34,34,.2);
+
 }
 
 .menu-Ul {
@@ -36,6 +37,7 @@
   font-weight: bold;
   color: white;
   transition: .3s linear;
+  background: rgba(34,34,34,.2);
 }
 
 .menu-Ul li:hover {
