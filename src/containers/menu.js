@@ -16,8 +16,8 @@ class Menu extends  Component{
         }
     }
     componentDidMount(){
-        let nav =  document.querySelector('nav.menu');
-        let div = nav.querySelector('div');
+        let nav =  document.querySelector('nav#menu');
+        let div = nav.querySelector('.menu-cover');
         
         div.style.transitionProperty = 'all';
         div.style.transitionDuration = '0.65s';
@@ -26,10 +26,27 @@ class Menu extends  Component{
         nav.onmouseout = function(){ div.style.transform = 'translateX(-100%)'; };
         
     }  
+    pin() {
+        let nav = this.state.ref.current;
+        
+        if( nav.onmouseout ) {
+            nav.onmouseout = false;
+            nav.querySelector('div.img').setAttribute('pin', 'off');
+
+        } else {
+            nav.onmouseout = function(){ 
+                nav.querySelector('.menu-cover').style.transform = 'translateX(-100%)';
+            };
+            nav.querySelector('div.img').setAttribute('pin', 'on');
+        }
+    }
     render(){
         return (
-            <nav className='menu unselectable' ref={this.state.ref}>
-                <div>
+            <nav id='menu' className='unselectable' ref={this.state.ref}>
+                <div className='menu-cover' >
+                    <button className='pin-button' onClick={this.pin} >
+                        <div className="pin img" pin='on'></div>
+                    </button>
                     <Mode />
                     <ul className='menu-Ul'>
                         <li><a href='https://vk.com/wmwll'>Пряничек</a></li>

@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import '../style/mode.css'
 
-class Mode extends  Component{
+class Mode extends Component{
   constructor(props){
       super(props);
       autoBind(this);
       this.state = { 
           ref : React.createRef(),
-         
       }
   }
-
   render(){
     return (
-      <div className="toggle-button-cover" ref={this.state.ref}>
+      <div id='mode' ref={this.state.ref} > 
         <div className="button-cover">
           <div className="button b2" id="button-10">
             <input type="checkbox" className="checkbox"/>

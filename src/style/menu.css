@@ -1,4 +1,4 @@
-.menu {
+#menu {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,9 +6,9 @@
   width: 5%;
   z-index: 2;
 }
-.menu div {
+#menu div.menu-cover {
   position: sticky;
-  top: 10%;
+  top: 7%;
   width: 100px;
   visibility: visible;
 }
@@ -31,7 +31,7 @@
   font-family: 'Arimo', sans-serif;
   font-weight: bold;
   color: white;
-  transition: 0.8s linear;
+  transition: 0.6s linear;
   background: rgba(34,34,34,.2);
 
   border: 1px solid rgba(34,34,34,.2); 
@@ -40,4 +40,24 @@
 }
 .menu-Ul li:hover {
   background: rgba(0 ,0 ,0 ,.4);
+}
+
+.pin-button {
+  border: 0;
+  background: #EBF7FC;
+}
+
+div.img {
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+}
+.pin-button div[pin=on] {
+  background: url(./img/pin-on.png) 100% 100% no-repeat; 
+  background-size: cover;
+}
+.pin-button div[pin=off] {
+  background: url(./img/pin-off.png) 100% 100% no-repeat; 
+  background-size: cover;
 }

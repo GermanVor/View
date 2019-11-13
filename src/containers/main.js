@@ -20,18 +20,17 @@ class Main extends  Component{
             mapMenu : mapMenu,
         }
     }
-  
     render(){
         return (
-            <div className='main raz' ref={this.state.ref}>
+            <div id='main' className='raz' ref={this.state.ref}>
                 <HashRouter>
                     <Menu />
-                    <Mode />
                     <Switch>
                         {this.state.mapMenu.map( el => (
                             <Route path={'/' + el.name } component={ el.ReactModule }/>
                         ))}
                     </Switch>
+                    
                 </HashRouter>
             </div>
         );
