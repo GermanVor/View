@@ -24,7 +24,6 @@ class Menu extends  Component{
 
         nav.onmouseover = function(){ div.style.transform = 'translateX(0)'; };
         nav.onmouseout = function(){ div.style.transform = 'translateX(-100%)'; };
-        
     }  
     pin() {
         let nav = this.state.ref.current;
