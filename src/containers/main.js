@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import '../style/main.css'
 import Menu from './menu'
-import Mode from './mode'
 
 import { 
     HashRouter,
@@ -22,15 +21,14 @@ class Main extends  Component{
     }
     render(){
         return (
-            <div id='main' className='raz' ref={this.state.ref}>
+            <div id='main' className='raz' ref={this.state.ref} key='Main' >
                 <HashRouter>
-                    <Menu />
-                    <Switch>
+                    <Menu/>
+                    <Switch  >
                         {this.state.mapMenu.map( el => (
                             <Route path={'/' + el.name } component={ el.ReactModule }/>
                         ))}
                     </Switch>
-                    
                 </HashRouter>
             </div>
         );

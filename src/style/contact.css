@@ -1,8 +1,8 @@
-.footerBar{
+.footerContactBar{
   display: flex;
   justify-content: center;
 }
-.footerBar img{
+.footerContactBar img{
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -12,9 +12,30 @@
   transform: scale(1.0);
   transition-duration: 500ms;
 }
-.footerBar img:hover{
+.footerContactBar img:hover{
   transform: scale(1.2);
   transition-property: all;
   transition-duration: 500ms;
   transition-delay: 0s;
+}
+.contact p {
+  text-decoration: underline ;
+}
+.contact p > button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 10px 10px 5px 10px ;
+  border-radius: 25% 25% 25% 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Arimo', sans-serif;
+}
+.contact p > button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contact p > button:active {
+  background-color: rgba(0, 0, 0, 0.7);
 }

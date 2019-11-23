@@ -3,12 +3,14 @@
   background-color: tomato;
 }
 
-
 a:link {
   color: #000;
 }
 a:hover {
   color: rgba(253, 251, 251, 0.5);
+}
+a {
+  color: #000;
 }
 .unselectable {
   -webkit-touch-callout: none; 
@@ -23,4 +25,14 @@ a:hover {
 }
 ::-moz-selection {
   background: #ffb7b7;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+button {
+  outline: none;
+  border: none;
 }
