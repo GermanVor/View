@@ -13,6 +13,7 @@ export class contact extends Component{
             'https://www.instagram.com/semen_lypin',
             'https://t.me/djorman',
             'vorotnikov.german@yandex.ru',
+            'https://github.com/GermanVor'
           ],
       }
   }

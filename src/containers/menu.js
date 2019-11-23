@@ -4,6 +4,7 @@ import '../style/menu.css'
 import { Link } from 'react-router-dom';
 import mapMenu from '../components/mapMenu'
 import Mode from './mode'
+import Timer from './timer'
 
 class Menu extends  Component{
     constructor(props){
@@ -53,6 +54,7 @@ class Menu extends  Component{
                         ) )}
                         {/* <li><a href='https://vk.com/wmwll'>Пряничек</a></li>*/}
                     </ul>
+                    <Timer />
                 </div>
             </nav>
         );

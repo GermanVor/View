@@ -1,0 +1,6 @@
+.home p {
+  border-bottom: 3px solid rgba(0 ,0 ,0 ,.6);
+}
+.home p:last-child {
+  border-bottom: 0;
+}

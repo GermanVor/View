@@ -8,7 +8,7 @@
 }
 #menu div.menu-cover {
   position: sticky;
-  top: 7%;
+  top: 5%;
   width: 100px;
   visibility: visible;
 }
@@ -41,16 +41,13 @@
 .menu-Ul li:hover {
   background: rgba(0 ,0 ,0 ,.4);
 }
-
 .menu-Ul li:active{
   background: rgba(0 ,0 ,0 ,.6);
 }
-
 .pin-button {
   border: 0;
   background: #EBF7FC;
 }
-
 div.img {
   height: 40px;
   width: 40px;
