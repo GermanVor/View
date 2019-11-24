@@ -18,10 +18,10 @@
   transition-duration: 500ms;
   transition-delay: 0s;
 }
-.contact p {
+.contact a {
   text-decoration: underline ;
 }
-.contact p > button {
+.contact a > button {
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   color: aliceblue;;
@@ -33,9 +33,9 @@
   cursor: pointer;
   font-family: 'Arimo', sans-serif;
 }
-.contact p > button:hover {
+.contact a > button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.contact p > button:active {
+.contact a > button:active {
   background-color: rgba(0, 0, 0, 0.7);
 }

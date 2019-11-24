@@ -22,7 +22,6 @@ export class contact extends Component{
       let copyText = this.getAttribute('textCopy');
       navigator.clipboard.writeText(copyText);
     } 
-    
     document.querySelectorAll('p > button').forEach( a => a.onclick = copy.bind(a) )
   }
   render() {
@@ -30,7 +29,7 @@ export class contact extends Component{
       <section className='contact'>
         <h1 className='line'>Для связи со мной</h1>
         {this.state.links.map( el => (
-          <p>{el} <button textCopy = {el} >copy</button></p>
+          <p><a href={el} >{el} <button textCopy = {el} >copy</button></a></p>
         ))}
         <p><a href="tel:8-952-202-9672" target="_blank" rel="noopener noreferrer" >8-952-202-9672</a></p>
         <div className="footerContactBar">
