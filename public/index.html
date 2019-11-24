@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="./dark.css" onload="document.documentElement.style.display = ``" mode='dark'>
     
     <script>
-      if(window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-        alert(1111)
+      alert(window.matchMedia('(prefers-color-scheme)'))
+      if(!window.matchMedia('(prefers-color-scheme)').media ) {
+        
         if(document.querySelector('link[mode=dark]') ) {
           document.querySelector('link[mode=dark]').setAttribute('disabled', 'disabled')
         } 

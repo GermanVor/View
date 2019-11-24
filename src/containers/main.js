@@ -19,6 +19,10 @@ class Main extends  Component{
             mapMenu : mapMenu,
         }
     }
+    componentDidMount(){
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+            this.state.ref.current.staly.paddingRight = 0;
+    }
     render(){
         return (
             <div id='main' className='raz' ref={this.state.ref} key='Main' >
