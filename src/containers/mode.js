@@ -24,7 +24,7 @@ class Mode extends Component{
   }
   componentDidMount() { 
     if(document.querySelector('link[mode=light]').hasAttribute('disabled')){
-      this.state.ref.querySelector('div.button').onclick()
+      this.state.ref.current.querySelector('.checkbox').click(); 
     }
   }
   render(){
