@@ -22,7 +22,11 @@ class Mode extends Component{
       }
     }
   }
-  componentDidMount() {  }
+  componentDidMount() { 
+    if(document.querySelector('link[mode=light]').hasAttribute('disabled')){
+      this.state.ref.querySelector('div.button').onclick()
+    }
+  }
   render(){
     return (
       <div id='mode' ref={this.state.ref} > 
