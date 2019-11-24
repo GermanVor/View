@@ -20,8 +20,10 @@ class Main extends  Component{
         }
     }
     componentDidMount(){
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-            this.state.ref.current.staly.paddingRight = 0;
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            this.state.ref.current.style.paddingRight = '15px';
+            this.state.ref.current.style.textAlign = 'justify';
+        }
     }
     render(){
         return (

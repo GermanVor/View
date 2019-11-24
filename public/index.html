@@ -4,14 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="./favicon .ico">
-
-    <link rel="stylesheet" href="./light.css" onload="document.documentElement.style.display = ``" mode='light'>
-    <link rel="stylesheet" href="./dark.css" onload="document.documentElement.style.display = ``" mode='dark'>
     
+    <link rel="stylesheet" href="./dark.css" onload="document.documentElement.style.display = ``" mode='dark' media="all">
+    <link rel="stylesheet" href="./light.css" onload="document.documentElement.style.display = ``" mode='light' media="all">
+
     <script>
-      alert(window.matchMedia('(prefers-color-scheme)'))
-      if(!window.matchMedia('(prefers-color-scheme)').media ) {
-        
+      alert( window.matchMedia('(prefers-color-scheme: dark)').matches )
+      if( window.matchMedia('(prefers-color-scheme: dark)') ) {
         if(document.querySelector('link[mode=dark]') ) {
           document.querySelector('link[mode=dark]').setAttribute('disabled', 'disabled')
         } 
