@@ -12,18 +12,38 @@ class Mode extends Component{
   toggle() {
     let dark = document.querySelector('link[mode=dark]');
     let light = document.querySelector('link[mode=light]');
+
+    if(!light){
+      document.querySelector('head').insertAdjacentHTML('beforeend',
+       '<link rel="stylesheet" href="./light.css" onload="document.documentElement.style.display = ``" mode="light" media="all">'
+      );
+    }
+    if(!dark){
+      document.querySelector('head').insertAdjacentHTML('beforeend',
+      '<link rel="stylesheet" href="./dark.css" onload="document.documentElement.style.display = ``" mode="dark" media="all">'
+      );
+    }
+
+    dark = document.querySelector('link[mode=dark]');
+    light = document.querySelector('link[mode=light]');
+
     if( dark && light ){
-      if(light.hasAttribute('disabled') ){
+      let a = document.querySelector('div.knobs');
+      if( a.getAttribute('mode') == 'dark' ){
         light.removeAttribute('disabled');
         dark.setAttribute('disabled','disabled');
+        a.removeAttribute('mode');
+        a.setAttribute('mode', 'light'); console.log('light')
       } else {
         dark.removeAttribute('disabled');
         light.setAttribute('disabled','disabled');
+        a.removeAttribute('mode');
+        a.setAttribute('mode', 'dark'); console.log('dark')
       }
-    }
+    } 
   }
   componentDidMount() { 
-    if(!document.querySelector('link[mode=dark]').hasAttribute('disabled')){
+    if(document.querySelector('link[mode=dark]') && !document.querySelector('link[mode=dark]').hasAttribute('disabled')){
       this.state.ref.current.querySelector('.checkbox').click(); 
     }
   }
@@ -33,7 +53,7 @@ class Mode extends Component{
         <div className="button-cover">
           <div className="button b2" id="button-10">
             <input type="checkbox" className="checkbox" onChange={this.toggle} />
-            <div className="knobs" mode='dark'>
+            <div className="knobs" mode='light'>
               <span>Light</span>
             </div>
             <div className="layer"></div>
