@@ -30,7 +30,7 @@ class Timer extends Component{
 
     return (
       <div id='timer' ref={this.state.ref} > 
-        { a(date.getHours()) +':'+ a(date.getMinutes()) + ':' + a(date.getSeconds()) +'  '+ days[date.getDay()]}<br/>
+        { date.getHours() +':'+ a(date.getMinutes()) + ':' + a(date.getSeconds()) +'  '+ days[date.getDay()]}<br/>
         { a(date.getUTCDate()) +':'+ a(date.getMonth()) +':'+ date.getYear()%100 }<br/>
       </div>
     );

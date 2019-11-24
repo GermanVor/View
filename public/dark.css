@@ -1,0 +1,72 @@
+#root div.App {
+  background: rgba(0, 0, 0, 0.95);
+  color: rgb(72, 113, 151);
+}
+#root a {
+  color: rgb(72, 113, 151);
+}
+#root a:hover {
+  color:rgb(104, 155, 202);
+}
+#root a:active {
+  color:rgb(122, 186, 247);
+}
+#root p > button {
+  background:  rgb(72, 113, 151);
+}
+#root p > button:hover {
+  background:  rgb(104, 155, 202);
+}
+#root p > button:active {
+  background:  rgb(122, 186, 247);
+}
+#root .home p {
+  border-bottom: 3px solid rgb(104, 155, 202);
+}
+#root .home p:last-child {
+  border-bottom: 0;
+}
+
+::selection {
+  background: rgb(121, 188, 247);
+}
+::-moz-selection {
+  background: rgb(121, 188, 247);
+}
+
+#root .menu-Ul li a {
+  color: aliceblue;
+}
+#root .menu-Ul li {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-right: 2px solid rgba(255, 255, 255, 0.2); 
+}
+#root .menu-Ul li:hover {
+  background: rgba(255 ,255 ,255 ,.4);
+}
+#root .menu-Ul li:active{
+  background: rgba(255 ,255 ,255 ,.6);
+}
+#root .pin-button {
+  background: #EBF7FC;
+}
+
+#root #timer {
+  background: rgba(255 ,255 ,255 ,.25);
+  border-radius: 0 0  4px 0;
+  border: 2px solid rgba(255 ,255 ,255 ,.2); 
+  color: aliceblue;
+}
+
+#root #mode {
+  background: rgba(255 ,255 ,255 ,.25);
+  border-radius: 0 4px 0 0;
+  border: 2px solid rgba(255 ,255 ,255 ,.2);
+  border-bottom: 0;
+  border-left: 0;
+}
+
+#root img {
+  filter: grayscale(.25)
+}

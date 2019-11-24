@@ -9,6 +9,9 @@ a:link {
 a:hover {
   color: rgba(253, 251, 251, 0.5);
 }
+a:active {
+  color: rgba(253, 251, 251, 0.85);
+}
 a {
   color: #000;
 }
@@ -20,12 +23,7 @@ a {
   -ms-user-select: none;     
   user-select: none;        
 }
-::selection {
-  background: #ffd0d0;
-}
-::-moz-selection {
-  background: #ffb7b7;
-}
+
 .left {
   float: left;
 }

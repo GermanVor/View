@@ -1,0 +1,56 @@
+div.App {
+  background-color: tomato;
+}
+::selection {
+  background: #ffd0d0;
+}
+::-moz-selection {
+  background: #ffb7b7;
+}
+a:link {
+  color: #000;
+}
+a:hover {
+  color: rgba(253, 251, 251, 0.5);
+}
+a:active {
+  color: rgba(253, 251, 251, 0.85);
+}
+a {
+  color: #000;
+}
+
+#root .menu-Ul li a {
+  color: aliceblue;
+}
+#root .menu-Ul li {
+  background: rgba(34,34,34,.2);
+  border: 1px solid rgba(34,34,34,.2); 
+  border-right: 2px solid rgba(34,34,34,.2); 
+}
+#root .menu-Ul li:hover {
+  background: rgba(0 ,0 ,0 ,.4);
+}
+#root .menu-Ul li:active{
+  background: rgba(0 ,0 ,0 ,.6);
+}
+#root .pin-button {
+  background: #EBF7FC;
+}
+
+#root #timer {
+  background: rgba(34,34,34,.25);
+  border-radius: 0 0  4px 0;
+  border: 2px solid rgba(34,34,34,.2); 
+  color: aliceblue;
+}
+
+#root #mode {
+  position: relative;
+  height: 60px;
+  background: rgba(34,34,34,.25);
+  border-radius: 0 4px 0 0;
+  border: 2px solid rgba(34,34,34,.2); 
+  border-bottom: 0;
+  border-left: 0;
+}

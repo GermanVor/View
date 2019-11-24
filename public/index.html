@@ -4,6 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="./favicon .ico">
+
+    <link rel="stylesheet" href="./light.css" onload="document.documentElement.style.display = ``" mode='light'>
+    <link rel="stylesheet" href="./dark.css" onload="document.documentElement.style.display = ``" mode='dark'>
+
+    <script>
+      if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+        if(document.querySelector('link[mode=dark]') ) {
+          document.querySelector('link[mode=dark]').setAttribute('disabled', 'disabled')
+        } 
+      } 
+    </script>
+
     <meta
       name="description"
       content="Web site created using create-react-app"
