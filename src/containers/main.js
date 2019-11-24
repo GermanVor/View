@@ -20,7 +20,7 @@ class Main extends  Component{
         }
     }
     componentDidMount(){
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
             this.state.ref.current.style.paddingRight = '15px';
             this.state.ref.current.style.textAlign = 'justify';
         }

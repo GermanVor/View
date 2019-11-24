@@ -32,7 +32,6 @@ class Menu extends  Component{
         if( nav.onmouseout ) {
             nav.onmouseout = false;
             nav.querySelector('div.img').setAttribute('pin', 'off');
-
         } else {
             nav.onmouseout = function(){ 
                 nav.querySelector('.menu-cover').style.transform = 'translateX(-100%)';
@@ -44,9 +43,12 @@ class Menu extends  Component{
         return (
             <nav id='menu' className='unselectable' ref={this.state.ref} key='Menu'>
                 <div className='menu-cover' >
-                    <button className='pin-button' onClick={this.pin} >
-                        <div className="pin img" pin='off'></div>
-                    </button>
+                    {/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ?
+                        '' : 
+                        <button className='pin-button' onClick={this.pin} >
+                            <div className="pin img" pin='off'></div>
+                        </button>
+                    }
                     <Mode />
                     <ul className='menu-Ul'>
                         {this.state.mapMenu.map( el => (
