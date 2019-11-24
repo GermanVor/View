@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="./dark.css" onload="document.documentElement.style.display = ``" mode='dark' media="all">
 
     <script>
-      if( window.matchMedia('(prefers-color-scheme: dark)').matches ) {
-        if(document.querySelector('link[mode=light]') ) {
-          document.querySelector('link[mode=light]').setAttribute('disabled', 'disabled');
-        } 
-      } else {
+      if( !window.matchMedia('(prefers-color-scheme: dark)').matches ) {
         if(document.querySelector('link[mode=dark]') ) {
           document.querySelector('link[mode=dark]').setAttribute('disabled', 'disabled');
           document.documentElement.style.display = 'none';
