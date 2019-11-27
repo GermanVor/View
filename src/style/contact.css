@@ -21,7 +21,7 @@
 .contact a {
   text-decoration: underline ;
 }
-.contact a > button {
+.contact p > button {
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   color: aliceblue;;
@@ -33,9 +33,9 @@
   cursor: pointer;
   font-family: 'Arimo', sans-serif;
 }
-.contact a > button:hover {
+.contact p > button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.contact a > button:active {
+.contact p > button:active {
   background-color: rgba(0, 0, 0, 0.7);
 }

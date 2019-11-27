@@ -22,16 +22,16 @@ export class contact extends Component{
       let copyText = this.getAttribute('textCopy');
       navigator.clipboard.writeText(copyText);
     } 
-    document.querySelectorAll('p > button').forEach( a => a.onclick = copy.bind(a) )
+    document.querySelectorAll('div.contact p > button').forEach( a => a.onclick = copy.bind(a) )
   }
   render() {
     return (
       <section className='contact'>
         <h1 className='line'>Для связи со мной</h1>
         {this.state.links.map( el => (
-          <p><a href={el} >{el} <button textCopy = {el} >copy</button></a></p>
+          <p><a href={el} >{el} </a><button textCopy = {el} >copy</button></p>
         ))}
-        <p><a href="tel:8-952-202-9672" target="_blank" rel="noopener noreferrer" >8-952-202-9672</a></p>
+        <p><a href="tel:8-952-202-9672" target="_blank" rel="noopener noreferrer" >8-952-202-9672 </a><button textCopy = '8-952-202-9672' >copy</button></p>
         <div className="footerContactBar">
           <a href="https://vk.com/id230124085" >
             <img alt='' src={require('../style/img/vk.png')} className="VK"/>

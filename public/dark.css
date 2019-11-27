@@ -11,13 +11,13 @@
 #root a:active {
   color:rgb(122, 186, 247);
 }
-#root .contact a > button {
+#root .contact p > button {
   background:  rgb(72, 113, 151);
 }
-#root .contact a > button:hover {
+#root .contact p > button:hover {
   background:  rgb(104, 155, 202);
 }
-#root .contact a > button:active {
+#root .contact p > button:active {
   background:  rgb(122, 186, 247);
 }
 #root .home p {
