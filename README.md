@@ -15,5 +15,5 @@ You will also see any lint errors in the console.
 
  
 Проект задумывался для развития навыков верстки а так же применения продвинутых приемов React.  
-Куда проще будет открыть [его здесь](https://quizzical-hugle-b8e933.netlify.com/), чем скачивать и запускать.
+Ознакомиться с результатом можно по [ссылке](https://german-vor.netlify.com)
  
