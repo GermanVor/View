@@ -31,8 +31,9 @@ class Main extends  Component{
                 <HashRouter>
                     <Menu/>
                     <Switch  >
-                        {this.state.mapMenu.map( el => (
-                            <Route path={'/' + el.name } component={ el.ReactModule }/>
+                        {this.state.mapMenu.map( (el, ind) => (
+                            el.name==='about' ? <Route key={ind} exact path={'/'} component={ el.ReactModule }/>:
+                             <Route key={ind} path={'/' + el.name } component={ el.ReactModule }/>
                         ))}
                     </Switch>
                 </HashRouter>

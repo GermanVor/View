@@ -51,8 +51,11 @@ class Menu extends  Component{
                     }
                     <Mode />
                     <ul className='menu-Ul'>
-                        {this.state.mapMenu.map( el => (
-                                <li><Link to={'/' + el.name }>{el.name}</Link></li>
+                        {this.state.mapMenu.map( (el, ind) => (
+                                <li key={ind+'key'}>{
+                                    el.name==='about'? <Link to={'/'}>{el.name}</Link> :
+                                    <Link to={'/' + el.name }>{el.name}</Link>
+                                }</li>
                         ) )}
                         {/* <li><a href='https://vk.com/wmwll'>Пряничек</a></li>*/}
                     </ul>

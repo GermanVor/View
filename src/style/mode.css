@@ -60,7 +60,7 @@
   font-weight: bold;
   text-align: center;
   line-height: 1;
-  padding: 9px 4px;
+  padding: 9px 4px 9px 3px;
   border-radius: 2px;
   transition: 0.3s ease all;
 }
