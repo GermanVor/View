@@ -12,19 +12,18 @@ class Menu extends  Component{
         autoBind(this);
         this.state = { 
             ref : React.createRef(),
-            arrLi : [],
-            mapMenu : mapMenu
         }
+        this.mapMenu = mapMenu;
     }
     componentDidMount(){
-        let nav =  document.querySelector('nav#menu');
+        let nav =  this.state.ref.current;//document.querySelector('nav#menu');
         let div = nav.querySelector('.menu-cover');
         
         div.style.transitionProperty = 'all';
         div.style.transitionDuration = '0.65s';
 
         nav.onmouseover = function(){ div.style.transform = 'translateX(0)'; };
-        nav.onmouseout = false;//function(){ div.style.transform = 'translateX(-100%)'; }
+        nav.onmouseout = false;
     }  
     pin() {
         let nav = this.state.ref.current;
@@ -51,13 +50,12 @@ class Menu extends  Component{
                     }
                     <Mode />
                     <ul className='menu-Ul'>
-                        {this.state.mapMenu.map( (el, ind) => (
+                        {this.mapMenu.map( (el, ind) => (
                                 <li key={ind+'key'}>{
                                     el.name==='about'? <Link to={'/'}>{el.name}</Link> :
                                     <Link to={'/' + el.name }>{el.name}</Link>
                                 }</li>
                         ) )}
-                        {/* <li><a href='https://vk.com/wmwll'>Пряничек</a></li>*/}
                     </ul>
                     <Timer />
                 </div>

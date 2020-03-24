@@ -10,6 +10,7 @@ class Mode extends Component{
     this.toggle = this.toggle.bind(this)
   }
   toggle() {
+    //плохая практика использовать css селекторы , лень рефакторить - работает и ладно 
     let dark = document.querySelector('link[mode=dark]');
     let light = document.querySelector('link[mode=light]');
 
